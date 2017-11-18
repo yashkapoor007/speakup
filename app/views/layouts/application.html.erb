@@ -17,7 +17,9 @@
 		<li><%= link_to "Posts",root_path %></li>
 		<li><%= link_to 'About',about_path%></li>
 	</ul>
-	<p class="sign_in">User Login</p>
+	<% if !user_signed_in?%>
+	<p class="sign_in"><%= link_to 'User Login',new_user_session_path%></p>
+	<%end%>
 </div>
 <div id="main_content">
 	<div id="header">
@@ -30,10 +32,12 @@
 	<% else%>
 		<p><%=link_to 'Back to Post feed',root_path%></p>
 		<%end%>
+		<% if user_signed_in? %>
 		<div class="buttons">
 			<buttons class="button"><%= link_to "Create Post", new_post_path %></buttons>
-			<buttons class="button">Log Out</buttons>
+			<buttons class="button"><%= link_to 'Log Out',destroy_user_session_path, method: :delete%></buttons>
 		</div>
+		<%end%>
 	</div>
 	<%flash.each do |name,msg| %>
 	<%= content_tag(:div,msg, class: "alert")%>
