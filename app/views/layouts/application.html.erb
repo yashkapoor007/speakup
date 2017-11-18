@@ -15,13 +15,21 @@
 			<%= link_to "Bolo",root_path %>
 		</li>
 		<li><%= link_to "Posts",root_path %></li>
-		<li>About</li>
+		<li><%= link_to 'About',about_path%></li>
 	</ul>
 	<p class="sign_in">User Login</p>
 </div>
 <div id="main_content">
 	<div id="header">
+	<% if current_page?(root_path)%>
 		<p>Post Feeds</p>
+
+	<% elsif current_page?(about_path)%>
+		<p>My Site</p>
+
+	<% else%>
+		<p><%=link_to 'Back to Post feed',root_path%></p>
+		<%end%>
 		<div class="buttons">
 			<buttons class="button"><%= link_to "Create Post", new_post_path %></buttons>
 			<buttons class="button">Log Out</buttons>

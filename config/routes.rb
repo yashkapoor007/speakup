@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :comments
   end
     root "posts#index"
+
+    get '/about', to: "pages#about"
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
