@@ -1,3 +1,5 @@
+<% if user_signed_in? %>
+<h3>Join Discussion</h3>
 <%= form_for([@post,@post.comments.build]) do |f|%>
 	<p>
 		<%= f.label :name%>
@@ -14,4 +16,5 @@
 	    	<%= f.submit %>
 	    </p>
 
+<%end%>
 <%end%>
