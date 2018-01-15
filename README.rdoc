@@ -1,6 +1,6 @@
 == README
 
-Placement Baba is a portal for users to share their placement stories,to have information about the placements happening in the college
+==Placement Baba is a portal for users to share their placement stories,to have information about the placements happening in the college
 
 
 
