@@ -30,7 +30,7 @@ class PostsController < ApplicationController
 	end
 	def destroy
 		@post = Post.find(params[:id])
-		if @post.user==current_user
+		if @post.user==current_user || current_user.admin?
 		@post.destroy
 	end
 		redirect_to root_path
