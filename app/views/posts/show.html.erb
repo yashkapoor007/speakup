@@ -24,3 +24,18 @@
 	<%= render @post.comments %>
 	<%= render 'comments/form' %>
 </div>
+<style>
+.footer {
+	 position: fixed;
+	 right: 10px;
+	 bottom: 0;
+	 width: 50%;
+	 background-color: auto;
+	 color: black;
+	 text-align: right;
+}
+</style>
+
+<div class="footer">
+ <p><b><i><%= "#{@post.impressionist_count(:filter=>:session_hash)} views" %></i></b></p>
+</div>
