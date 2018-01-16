@@ -31,7 +31,7 @@ config.action_mailer.default_url_options = { host: 'tuplacements.herokuapp.com' 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
   ActionMailer::Base.smtp_settings = {
-    :user_name => 'yashalexkapoor',
+    :user_name => 'iamaverage1106',
     :password => 'yash123@',
     :domain => 'gmail.com',
     :address => 'smtp.gmail.com',
@@ -58,7 +58,7 @@ config.action_mailer.default_url_options = { host: 'tuplacements.herokuapp.com' 
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
-
+  config.action_mailer.perform_deliveries = true
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
