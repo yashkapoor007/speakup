@@ -58,7 +58,7 @@ config.action_mailer.default_url_options = { host: 'tuplacements.herokuapp.com' 
 
   # Prepend all log lines with the following tags.
   # config.log_tags = [ :subdomain, :uuid ]
-  config.action_mailer.perform_deliveries = false
+  config.action_mailer.perform_deliveries = true
   # Use a different logger for distributed setups.
   # config.logger = ActiveSupport::TaggedLogging.new(SyslogLogger.new)
 
